@@ -1,0 +1,4 @@
+apiVersion: v2
+name: infurianto-chart
+description: A Helm chart for Kubernetes Hello World service
+version: 1.0.0

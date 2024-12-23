@@ -1,0 +1,17 @@
+app:
+  name: infurianto
+
+deployment:
+  name: infurianto-deployment
+  replicas: 2
+
+service:
+  name: infurianto-service
+  nodePort: 30008
+
+image:
+  repository: nginx
+  tag: alpine
+
+configMap:
+  name: html-config
