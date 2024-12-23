@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configMap.name }}
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Hello world from Angelina!</title>
+    </head>
+    <body>
+        <h1>Hello world from Angelina! <span style="color:blue;">Revision 2</span></h1>
+    </body>
+    </html>
