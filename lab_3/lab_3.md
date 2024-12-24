@@ -125,7 +125,7 @@ kubectl get all
 
 1. Получим URL для доступа к сервису:
    ```bash
-   minikube service hello-world-service --url
+   minikube service infurianto-service --url
    ```
 
 ![Image 3](images/lab3_image_3.png)

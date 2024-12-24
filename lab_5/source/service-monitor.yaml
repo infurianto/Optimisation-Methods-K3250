@@ -1,0 +1,13 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: infurianto-monitor
+  namespace: monitoring
+spec:
+  selector:
+    matchLabels:
+      app: infurianto
+  endpoints:
+  - port: http
+    path: /metrics
+    interval: 15s
