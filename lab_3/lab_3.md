@@ -43,19 +43,19 @@ cd k8s-manifests
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world-deployment
+  name: infurianto-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: hello-world
+      app: infurianto
   template:
     metadata:
       labels:
-        app: hello-world
+        app: infurianto
     spec:
       containers:
-      - name: hello-world
+      - name: infurianto
         image: nginx:alpine
         ports:
         - containerPort: 80
@@ -74,11 +74,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-world-service
+  name: infurianto-service
 spec:
   type: NodePort
   selector:
-    app: hello-world
+    app: infurianto
   ports:
   - protocol: TCP
     port: 80
@@ -99,10 +99,10 @@ data:
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Hello World</title>
+        <title>Hello world from Angelina!</title>
     </head>
     <body>
-        <h1>Hello, World!</h1>
+        <h1>Hello world from Angelina!</h1>
     </body>
     </html>
 ```
