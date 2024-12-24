@@ -1,4 +1,4 @@
-# Лабораторная работа 3*: Создание Helm Chart и управление сервисом
+# Лабораторная работа 3*
 
 ## Цель работы
 
@@ -155,12 +155,12 @@
 
 4. **Откроем URL в браузере, чтобы убедиться в работоспособности сервиса.**
 
-  ![Image 6](images/lab3star_image_4.png)
+  ![Image 6](images/lab3star_image_6.png)
 
 ### 3. Обновление Helm Chart
 
-1. **Изменим HTML-контент в `values.yaml`:**
-  Обновим поле `index.html` в `templates/configmap.yaml`, например, добавив "Updated by Helm":
+1. **Изменим HTML-контент:**
+  Обновим поле `index.html` в `templates/configmap.yaml`, например, изменив Revision:
   ```html
   <h1>Hello world from Angelina! <span style="color:blue;">Revision 2</span></h1>
   ```
@@ -173,6 +173,10 @@
 3. **Проверим обновление:**
   - Выполним `kubectl get pods -n infurianto`.
   - Перейдём по URL, чтобы увидеть обновлённый контент.
+
+  ![Image 7](images/lab3star_image_7.png)
+
+  ![Image 8](images/lab3star_image_8.png)
 
 ### 4. Скриншоты
 
