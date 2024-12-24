@@ -1,0 +1,17 @@
+# Использование конкретного базового образа
+FROM php:8.1
+
+# Установка зависимостей с очисткой временных файлов
+RUN apt-get update && apt-get install -y curl git zip && rm -rf /var/lib/apt/lists/*
+
+# Копирование только необходимых файлов
+COPY src /var/www/html
+
+# Создание безопасного пользователя
+RUN useradd -m appuser
+USER appuser
+
+# Указание рабочей директории
+WORKDIR /var/www/html
+
+CMD ["php", "-S", "0.0.0.0:8000", "-t", "/var/www/html"]
